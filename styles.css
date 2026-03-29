@@ -1651,10 +1651,12 @@ body {
         padding: var(--spacing-md);
     }
 
-    .contact__detail-content {
-        text-align: left;
+    .contact__detail-content,
+    .contact__label,
+    .contact__link {
+        text-align: left !important;
     }
-    
+
     .contact__detail-icon {
         width: 40px;
         height: 40px;
