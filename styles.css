@@ -1650,6 +1650,10 @@ body {
     .contact__detail {
         padding: var(--spacing-md);
     }
+
+    .contact__detail-content {
+        text-align: left;
+    }
     
     .contact__detail-icon {
         width: 40px;
