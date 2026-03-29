@@ -32,6 +32,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Header with navigation -->
@@ -138,16 +140,7 @@
                         <h3 class="feature-card__title">24/7 Support</h3>
                         <p class="feature-card__description">Round-the-clock technical support to ensure your business operations run smoothly.</p>
                     </div>
-                    <div class="feature-card feature-card--highlight">
-                        <div class="feature-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.7088 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.76489 14.1003 1.98232 16.07 2.86" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">Proven Track Record</h3>
-                        <p class="feature-card__description">Successfully delivered 100+ projects for clients worldwide with 99% satisfaction rate.</p>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -187,7 +180,7 @@
             <div class="container">
                 <div class="services__header">
                     <h2 id="services-heading" class="section__title">Unparalleled Services Offering Guidance</h2>
-                    <p class="services__subtitle">We provide comprehensive IT solutions tailored to your business needs</p>
+                    <p class="services__subtitle">We provide comprehensive IT solutions tailored to your business needs, with flexible engagement models to match your goals</p>
                 </div>
                 <div class="services__grid">
                     <!-- Web Development Service -->
@@ -233,30 +226,33 @@
                         <p class="service-card__description">Intelligent automation and machine learning solutions that transform data into actionable insights and competitive advantages.</p>
                     </article>
 
-                    <!-- Cloud Services -->
+                    <!-- Backend Development -->
                     <article class="service-card">
                         <div class="service-card__header">
                             <div class="service-card__icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 10H20C21.1046 10 22 10.8954 22 12C22 13.1046 21.1046 14 20 14H18M6 10H4C2.89543 10 2 10.8954 2 12C2 13.1046 2.89543 14 4 14H6M8 14H16C17.1046 14 18 13.1046 18 12C18 10.8954 17.1046 10 16 10H8C6.89543 10 6 10.8954 6 12C6 13.1046 6.89543 14 8 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 7V4C4 3.44772 4.44772 3 5 3H19C19.5523 3 20 3.44772 20 4V7M4 7H20M4 7V20C4 20.5523 4.44772 21 5 21H19C19.5523 21 20 20.5523 20 20V7M8 11H16M8 15H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-                            <h3 class="service-card__title">Cloud Services</h3>
+                            <h3 class="service-card__title">Backend Development</h3>
                         </div>
-                        <p class="service-card__description">Reliable and secure cloud solutions that scale with your business needs and ensure maximum uptime.</p>
+                        <p class="service-card__description">Robust server-side solutions, APIs, and database architectures that power your applications with performance and reliability.</p>
                     </article>
 
-                    <!-- Digital Transformation -->
+                    <!-- UI/UX Design -->
                     <article class="service-card">
                         <div class="service-card__header">
                             <div class="service-card__icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 19L19 12L22 15L15 22L12 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18 13L16.5 5.5L2 2L5.5 16.5L13 18L18 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 2L9.586 9.586" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="11" cy="11" r="2" stroke="currentColor" stroke-width="2"/>
                                 </svg>
                             </div>
-                            <h3 class="service-card__title">Digital Transformation</h3>
+                            <h3 class="service-card__title">UI/UX Design</h3>
                         </div>
-                        <p class="service-card__description">Turning ideas into digital success through strategic technology adoption and innovative business processes.</p>
+                        <p class="service-card__description">User-centered design that combines intuitive interfaces with beautiful aesthetics to create engaging digital experiences.</p>
                     </article>
 
                     <!-- Custom IT Solutions -->
@@ -273,47 +269,42 @@
                         <p class="service-card__description">Tailored systems that fit your unique business needs and workflows with precision and scalability.</p>
                     </article>
                 </div>
-            </div>
-        </section>
 
-        <!-- Stats Section -->
-        <section class="stats" aria-labelledby="stats-heading">
-            <div class="container">
-                <div class="stats__grid">
-                    <div class="stat-item">
-                        <div class="stat-item__number">73</div>
-                        <div class="stat-item__label">Offices</div>
-                        <div class="stat-item__sublabel">Worldwide</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-item__number">240+</div>
-                        <div class="stat-item__label">Employees</div>
-                        <div class="stat-item__sublabel">Professional Team</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-item__number">120</div>
-                        <div class="stat-item__label">Partners</div>
-                        <div class="stat-item__sublabel">Global Network</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-item__number">100+</div>
-                        <div class="stat-item__label">Countries</div>
-                        <div class="stat-item__sublabel">We Serve</div>
-                    </div>
-                </div>
-                <div class="stats__map">
-                    <div class="stats__map-placeholder">
-                        <svg viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="800" height="400" fill="#f1f5f9"/>
-                            <text x="400" y="200" text-anchor="middle" fill="#94a3b8" font-size="24" font-family="Arial">Global Presence Map</text>
-                            <!-- Decorative dots for locations -->
-                            <circle cx="200" cy="150" r="8" fill="#06b6d4" opacity="0.6"/>
-                            <circle cx="350" cy="180" r="8" fill="#06b6d4" opacity="0.6"/>
-                            <circle cx="500" cy="160" r="8" fill="#06b6d4" opacity="0.6"/>
-                            <circle cx="650" cy="170" r="8" fill="#06b6d4" opacity="0.6"/>
-                            <circle cx="300" cy="250" r="8" fill="#f97316" opacity="0.6"/>
-                            <circle cx="550" cy="240" r="8" fill="#f97316" opacity="0.6"/>
-                        </svg>
+                <!-- Engagement Models -->
+                <div class="engagement" id="engagement">
+                    <h3 class="section__title section__title--small">Flexible Engagement Models</h3>
+                    <p class="services__subtitle">We adapt to your needs — choose the agreement type that works best for you</p>
+                    <div class="engagement__grid">
+                        <div class="engagement__card">
+                            <div class="engagement__icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4 class="engagement__title">Per Project</h4>
+                            <p class="engagement__description">
+                                Fixed-scope engagements with clear deliverables, timelines, and pricing.
+                                Ideal for well-defined projects with specific goals and milestones.
+                            </p>
+                        </div>
+                        <div class="engagement__card">
+                            <div class="engagement__icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4 class="engagement__title">Per Hour</h4>
+                            <p class="engagement__description">
+                                Flexible hourly billing for ongoing work, ad-hoc tasks, or evolving requirements.
+                                Pay only for the time you need, with full transparency.
+                            </p>
+                        </div>
+                        <div class="engagement__card">
+                            <div class="engagement__icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4 class="engagement__title">Consulting</h4>
+                            <p class="engagement__description">
+                                Expert IT consulting to guide your technology strategy, architecture decisions,
+                                and digital transformation — on your terms.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -386,7 +377,7 @@
                         <h3 class="founder__name">Youssef Abid</h3>
                         <p class="founder__title">Founder & CEO</p>
                         <div class="founder__details">
-                            <p><strong>Age:</strong> 29 years old</p>
+                            <p><strong>Age:</strong> 30 years old</p>
                             <p><strong>Education:</strong> Diplomed in 2021</p>
                         </div>
                         <p class="founder__bio">
@@ -420,7 +411,7 @@
                                 </div>
                                 <div class="contact__detail-content">
                                     <span class="contact__label">Email us at</span>
-                                    <a href="mailto:contact@itpidia.com" class="contact__link">contact@itpidia.com</a>
+                                    <a href="mailto:youssed.abidup@gmail.com" class="contact__link">youssed.abidup@gmail.com</a>
                                 </div>
                             </div>
                             <div class="contact__detail">
@@ -431,21 +422,10 @@
                                 </div>
                                 <div class="contact__detail-content">
                                     <span class="contact__label">Call us at</span>
-                                    <a href="tel:+1234567890" class="contact__link">+1 (234) 567-890</a>
+                                    <a href="tel:+1234567890" class="contact__link">+(216) 52 722 698</a>
                                 </div>
                             </div>
-                            <div class="contact__detail">
-                                <div class="contact__detail-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.657 16.657L13.414 20.9C12.6331 21.6808 11.3668 21.6808 10.586 20.9L6.343 16.657C3.21895 13.5329 3.21895 8.46705 6.343 5.343C9.46705 2.21895 14.5329 2.21895 17.657 5.343C20.781 8.46705 20.781 13.5329 17.657 16.657Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <div class="contact__detail-content">
-                                    <span class="contact__label">Visit us</span>
-                                    <span class="contact__link" style="cursor: default;">123 Tech Street, San Francisco, CA</span>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                     
@@ -485,7 +465,7 @@
                         <noscript>
                             <p class="form__fallback">
                                 JavaScript is required for form submission. You can also email us directly at 
-                                <a href="mailto:contact@itpidia.com?subject=Website Inquiry">contact@itpidia.com</a>
+                                <a href="mailto:youssed.abidup@gmail.com?subject=Website Inquiry">youssed.abidup@gmail.com</a>
                             </p>
                         </noscript>
                     </form>
@@ -523,9 +503,9 @@
             </div>
             
             <div class="footer__bottom">
-                <p class="footer__copyright">© 2025 ITPidia. All rights reserved.</p>
+                <p class="footer__copyright">© 2026 ITPidia. All rights reserved.</p>
                 <address class="footer__address">
-                    123 Tech Street, Innovation City, IC 12345
+                    
                 </address>
             </div>
         </div>

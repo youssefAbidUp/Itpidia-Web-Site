@@ -5,6 +5,9 @@
 
 /* ===== DOM Content Loaded Event ===== */
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS with your public key
+    emailjs.init('PWdMc6VhouKY7jc_w');
+    
     // Initialize all functionality when DOM is ready
     initMobileNavigation();
     initSmoothScrolling();
@@ -282,38 +285,45 @@ function clearError(field, errorElement) {
 /* ===== Form Submission Handler ===== */
 function handleFormSubmission(form) {
     const submitButton = form.querySelector('.form__submit');
-    const formData = new FormData(form);
     
     // Disable submit button during processing
     submitButton.disabled = true;
     submitButton.textContent = 'Sending...';
     
-    // Create mailto link as fallback (since this is a static site)
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const company = formData.get('company') || 'Not specified';
-    const message = formData.get('message');
+    // Collect form data for EmailJS template
+    const now = new Date();
+    const templateParams = {
+        to_email: 'youssef.abidup@gmail.com',
+        name: form.querySelector('#name').value.trim(),
+        email: form.querySelector('#email').value.trim(),
+        message: form.querySelector('#message').value.trim(),
+        time: now.toLocaleString('en-US', {
+            year: 'numeric', month: 'short', day: 'numeric',
+            hour: '2-digit', minute: '2-digit', hour12: true
+        })
+    };
     
-    const subject = `Website Inquiry from ${name}`;
-    const body = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nMessage:\n${message}`;
-    
-    const mailtoLink = `mailto:contact@itpidia.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    // Simulate form processing delay
-    setTimeout(() => {
-        // Open email client with pre-filled information
-        window.location.href = mailtoLink;
-        
-        // Show success message
-        showSuccessMessage();
-        
-        // Reset form
-        form.reset();
-        
-        // Re-enable submit button
-        submitButton.disabled = false;
-        submitButton.textContent = 'Send Message';
-    }, 1000);
+    // Send email via EmailJS
+    emailjs.send('service_082wrcg', 'template_aelbg9n', templateParams)
+        .then(function() {
+            // Show success message
+            showSuccessMessage();
+            
+            // Reset form
+            form.reset();
+            
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+        })
+        .catch(function(error) {
+            console.error('EmailJS Error:', error);
+            showErrorMessage('Failed to send message. Please try again or email us directly at contact@itpidia.com');
+            
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+        });
 }
 
 function showSuccessMessage() {
@@ -357,6 +367,45 @@ function showSuccessMessage() {
             notification.remove();
         }
     }, 5000);
+}
+
+function showErrorMessage(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification notification--error';
+    notification.innerHTML = `
+        <div class="notification__content">
+            <span class="notification__icon">✕</span>
+            <span class="notification__text">${message}</span>
+            <button class="notification__close" aria-label="Close notification">&times;</button>
+        </div>
+    `;
+    
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #ef4444;
+        color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 10000;
+        max-width: 400px;
+        animation: slideInRight 0.3s ease-out;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    const closeButton = notification.querySelector('.notification__close');
+    closeButton.addEventListener('click', () => {
+        notification.remove();
+    });
+    
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.remove();
+        }
+    }, 7000);
 }
 
 /* ===== Scroll Animations ===== */
