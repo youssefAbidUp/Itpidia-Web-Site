@@ -1594,6 +1594,11 @@ body {
     .services__grid {
         grid-template-columns: 1fr;
     }
+
+    /* Engagement grid */
+    .engagement__grid {
+        grid-template-columns: 1fr;
+    }
     
     .service-card--large {
         grid-row: auto;
