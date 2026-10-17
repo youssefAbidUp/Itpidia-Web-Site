@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/logo.svg" alt="ITPidia Logo" width="200"/>
+  <img src="./assets/itpidia-logo-light.png" alt="ITPidia Logo" width="200"/>
   
   # ITPidia - Company Website
   
@@ -275,7 +275,7 @@ Update in `<head>` section of `index.html`:
 <!-- Open Graph (for social media) -->
 <meta property="og:title" content="Your Company">
 <meta property="og:description" content="Your description">
-<meta property="og:image" content="./assets/logo.svg">
+<meta property="og:image" content="./assets/itpidia-logo-light.png">
 <meta property="og:url" content="https://yourwebsite.com">
 ```
 
